@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aima Hossen</title>
+  <meta name="description" content="Aima Hossen — MIT undergraduate studying AI &amp; Decision Making.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <header class="hero reveal">
+      <div class="avatar">
+        <img src="assets/pfp.jpg" alt="Aima Hossen">
+      </div>
+      <div>
+        <h1>Aima Hossen</h1>
+        <p class="tagline">MIT '29 &middot; AI &amp; Decision Making</p>
+        <p class="links">
+          <a href="mailto:aima@mit.edu">Email</a>
+          <a href="https://www.linkedin.com/in/aimahossen">LinkedIn</a>
+          <a href="https://github.com/hossenaima">GitHub</a>
+          <a href="assets/resume.pdf">CV</a>
+        </p>
+      </div>
+    </header>
+
+    <section id="about" class="reveal">
+      <h2>About</h2>
+      <p>I'm an undergraduate at MIT studying AI &amp; Decision Making, and I'm deeply passionate about AI tools &mdash; Claude Code, Cursor, Codex, and the wave of agents reshaping how people build and think. I want to use these tools to better humanity: through education that meets people where they are, richer ways to connect socially, and software that takes friction out of the things that matter.</p>
+    </section>
+
+    <section id="research" class="reveal">
+      <h2>Research</h2>
+
+      <article class="entry">
+        <h3>Undergraduate Researcher &middot; Fluid Interfaces, MIT Media Lab</h3>
+        <p class="meta">Jan 2026 &ndash; May 2026</p>
+        <p>Human subjects research on sonophoresis &mdash; ultrasound-based transdermal caffeine delivery via a co-developed wearable (SonoPatch) and its effects on cognitive performance. Built the end-to-end experiment stack in Python, Flask, and Lab Streaming Layer to synchronize EEG (MuseS), EmotiBit physiology, and SART event markers. Authored the Related Works for a paper submitted to ACM UIST 2026.</p>
+      </article>
+    </section>
+
+    <section id="projects" class="reveal">
+      <h2>Projects</h2>
+
+      <article class="entry">
+        <h3>
+          <a href="https://dasko.live/">Dasko</a>
+          <span class="badge">1st place &middot; GenAI Z&uuml;rich 2026</span>
+        </h3>
+        <p>A real-time voice-and-vision platform where you teach AI students who listen, watch, ask questions, and push back &mdash; an inverted classroom for learning by teaching. Built with the Google Gemini Live API, WebSockets, and Cloud Run.</p>
+        <p class="meta"><a href="https://devpost.com/software/dasko-gxvzie">Devpost</a> &middot; <a href="https://github.com/KingJerryX/Dasko-Zurich">Code</a></p>
+      </article>
+
+      <article class="entry">
+        <h3>SolsticeAI &middot; MIT SEVT</h3>
+        <p class="meta">Sep 2025 &ndash; May 2026</p>
+        <p>Lead developer for an embedded in-vehicle AI assistant on MIT's Solar Electric Vehicle. Engineered the full voice pipeline &mdash; audio capture, ChatGPT API integration, and audio playback &mdash; on a Raspberry Pi 5 infotainment unit with Apple CarPlay and CAN-bus communication to the vehicle.</p>
+      </article>
+    </section>
+
+    <section id="experience" class="reveal">
+      <h2>Experience</h2>
+
+      <article class="entry">
+        <h3>Controls Programmer &middot; FIRST Robotics Team 2601</h3>
+        <p class="meta">Sep 2023 &ndash; Jun 2025</p>
+        <p>Programmed robot subsystems in Java with WPILib &mdash; TalonSRX motor controllers, real-time CAN communication with the RoboRIO, and autonomous routines. Field-tested control boards under competition constraints.</p>
+      </article>
+    </section>
+
+    <footer class="reveal">
+      <p><a href="assets/resume.pdf">Full CV (PDF)</a></p>
+    </footer>
+  </main>
+
+  <script>
+    (function () {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('is-visible'); });
+        return;
+      }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+    })();
+  </script>
+</body>
+</html>
